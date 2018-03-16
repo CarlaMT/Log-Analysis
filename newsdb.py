@@ -39,7 +39,7 @@ query = """
 results = connectDatabase(query)
 print '1.  What are the most popular three articles of all time?'
 for result in results:
-    print (result[0], result[1])
+    print(result[0], result[1])
 
 
 # Create function to find top three authors
@@ -58,7 +58,7 @@ results = connectDatabase(query)
 print '\n'
 print '2.  What are the most popular three authors of all time?'
 for result in results:
-    print (result[0], result[1])
+    print(result[0], result[1])
 
 
 # Create function to locate more than 1% of requests leading to errors
@@ -77,7 +77,4 @@ results = connectDatabase(query)
 print '\n'
 print '3. On which day did more than 1% of requests lead to errors?'
 for result in results:
-    print (result[0], result[1])
-
-
-			
+    print(result[0], result[1])
