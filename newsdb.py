@@ -10,15 +10,13 @@ def connectDatabase(query):
     """This function connects to database in DBNAME, executes the 'query',
     then return 'result'
     """
-    try:
-        db = psycopg2.connect(database=DBNAME)
-        c = db.cursor()
-        c.execute(query)
-        result = c.fetchall()
-        db.close()
-        return result
-    except:
-        print("Can not connect to the database")
+    db = psycopg2.connect(database=DBNAME)
+    c = db.cursor()
+    c.execute(query)
+    result = c.fetchall()
+    db.close()
+    return result
+    print("Can not connect to the database")
 
 
 # Create function to find top three articles
